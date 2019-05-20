@@ -5,8 +5,10 @@ const doMath = require('./math');
 // init express application
 const app = express();
 const PORT = 3000;
+const simpleCalculatorRoute = require('./math'); //import math
 
-app.get('/', doMath);
+
+app.get('/', simpleCalculatorRoute);
 
 // Listen to port 3000
 app.listen(PORT);
